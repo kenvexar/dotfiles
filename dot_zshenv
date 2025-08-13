@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# Zsh Environment (.zshenv)
+#
+# This file is sourced on all invocations of the shell (interactive or not).
+# Its purpose is to set environment variables that should be available globally.
+# ------------------------------------------------------------------------------
+
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_DATA_HOME=${HOME}/.local/share
+export XDG_STATE_HOME=${HOME}/.local/state
+export XDG_CACHE_HOME=${HOME}/.cache
+
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+
+export PATH="/usr/local/opt/trash/bin:/usr/local/sbin:$PATH"
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+export LESSHISTFILE="${XDG_STATE_HOME}"/lesshst
+export SHELL_SESSIONS_DISABLE=1
+export CLAUDE_CONFIG_DIR="$HOME/.config/claude"
+export BAT_THEME=Nord
+
+if [ -f "$HOME/.zshenv.local" ]; then
+	source "$HOME/.zshenv.local"
+fi
+
+# uv
+export PATH="/Users/kent/.local/share/../bin:$PATH"

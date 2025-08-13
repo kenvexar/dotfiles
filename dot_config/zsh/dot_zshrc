@@ -1,0 +1,11 @@
+# ------------------------------------------------------------------------------
+# Main Zsh Configuration (.zshrc)
+#
+# This file acts as the entry point for the Zsh configuration.
+# It sources all configuration files from the `conf.d` directory.
+# ------------------------------------------------------------------------------
+
+# Load all .zsh files from the conf.d directory.
+for f in $ZDOTDIR/conf.d/*.zsh; do
+  source $f
+done

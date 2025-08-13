@@ -1,0 +1,39 @@
+{
+  "env": {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -n --arg reason 'Use Bash(gemini --prompt \"WebSearch: <query>\") instead.' '{decision: \"block\", reason: $reason}'"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(**)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519*)",
+      "Write(.env*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)"
+    ]
+  }
+}

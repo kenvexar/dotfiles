@@ -1,0 +1,12 @@
+{
+  "theme": "Default",
+  "selectedAuthType": "oauth-personal",
+  "usageStatisticsEnabled": false,
+  "mcpServers": {
+    "Context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    }
+  },
+  "optOut": true
+}

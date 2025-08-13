@@ -1,0 +1,10 @@
+[user]
+	name = kenvexar
+	email = 215433300+kenvexar@users.noreply.github.com
+[ghq]
+ root = ~/Dev
+[init]
+	defaultBranch = main
+	templatedir = /Users/kent/.config/git/template
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/

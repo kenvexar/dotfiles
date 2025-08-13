@@ -1,0 +1,8 @@
+[tools]
+claude-code = "latest"
+gemini-cli = "latest"
+neovim = "nightly"
+node = "latest"
+pnpm = "latest"
+usage = "latest"
+uv = "latest"
